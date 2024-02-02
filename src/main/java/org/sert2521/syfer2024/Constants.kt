@@ -16,8 +16,10 @@ object Constants
 
     object ElectronicIDs{
         const val LIMIT_SWITCH = 0
-        const val HALL_EFFECT_SENSOR = 9
-        const val SHAFT_ENCODER = 8
+        const val BEAM_BREAK = 2
+        const val READ_SWITCH = 9
+        //const val SHAFT_ENCODER = 8
+
     }
 }
 

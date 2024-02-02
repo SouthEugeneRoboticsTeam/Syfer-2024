@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.DigitalInput
 import edu.wpi.first.wpilibj.Encoder
 import edu.wpi.first.wpilibj.TimedRobot
 import edu.wpi.first.wpilibj2.command.CommandScheduler
+import org.sert2521.syfer2024.commands.PrintDIO
 
 /**
  * The VM is configured to automatically run this object (which basically functions as a singleton class),
@@ -16,8 +17,6 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler
  * object or package, it will get changed everywhere.)
  */
 object Robot : TimedRobot() {
-    private val limitSwitch = DigitalInput(Constants.ElectronicIDs.LIMIT_SWITCH)
-    private val hallEffectSensor = DigitalInput(Constants.ElectronicIDs.HALL_EFFECT_SENSOR)
     /**
      * The autonomous command to run. While a default value is set here,
      * the [autonomousInit] method will set it to the value selected in
@@ -89,11 +88,8 @@ object Robot : TimedRobot() {
     /** This method is called periodically during operator control.  */
     override fun teleopPeriodic()
     {
-        val switchState = !limitSwitch.get()
-
-        val magnetState = !hallEffectSensor.get()
-
-        println("$switchState, $magnetState")
+        val printDIO = PrintDIO()
+        printDIO.execute()
     }
 
     override fun testInit()
