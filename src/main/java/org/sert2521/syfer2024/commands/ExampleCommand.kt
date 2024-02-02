@@ -1,10 +1,10 @@
 package org.sert2521.syfer2024.commands
 
-import edu.wpi.first.wpilibj2.command.CommandBase
+import edu.wpi.first.wpilibj2.command.Command
 import org.sert2521.syfer2024.subsystems.ExampleSubsystem
 
 /** An example command that uses an example subsystem.  */
-class ExampleCommand : CommandBase()
+class ExampleCommand : Command()
 {
     init
     {
@@ -16,7 +16,6 @@ class ExampleCommand : CommandBase()
     {
         // Called when the command is initially scheduled.
         // Here we show an example of calling an action on the ExampleSubsystem
-        ExampleSubsystem.exampleAction()
     }
 
     override fun execute()

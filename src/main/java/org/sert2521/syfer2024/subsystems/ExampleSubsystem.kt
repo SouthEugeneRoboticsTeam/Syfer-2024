@@ -1,21 +1,20 @@
 package org.sert2521.syfer2024.subsystems
 
-import edu.wpi.first.wpilibj2.command.SubsystemBase
-import edu.wpi.first.wpilibj2.command.CommandBase
+import edu.wpi.first.wpilibj2.command.Subsystem
+import edu.wpi.first.wpilibj2.command.Command
 
 // By making a subsystem a Kotlin object, we ensure there is only ever one instance of it.
 // It also reduces the need to have reference variables for the subsystems to be passed around.
-object ExampleSubsystem : SubsystemBase()
-{
+object ExampleSubsystem : Subsystem {
     /**
      * Example command factory method.
      *
      * @return a command
      */
-    fun exampleMethodCommand(): CommandBase = runOnce {
+   // fun exampleMethodCommand(): Command = runOnce {
         // Subsystem.runOnce() implicitly add `this` as a required subsystem.
         // TODO: one-time action goes here
-    }
+    //}
 
     /**
      * An example method querying a boolean state of the subsystem (for example, a digital sensor).

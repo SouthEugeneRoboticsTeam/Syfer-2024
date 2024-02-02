@@ -3,7 +3,7 @@ package org.sert2521.syfer2024
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController
 import edu.wpi.first.wpilibj2.command.button.Trigger
 import org.sert2521.syfer2024.Constants.OperatorConstants
-import org.sert2521.syfer2024.commands.Autos
+//import org.sert2521.syfer2024.commands.Autos
 import org.sert2521.syfer2024.commands.ExampleCommand
 import org.sert2521.syfer2024.subsystems.ExampleSubsystem
 
@@ -24,7 +24,7 @@ object RobotContainer
     {
         configureBindings()
         // Reference the Autos object so that it is initialized, placing the chooser on the dashboard
-        Autos
+        //Autos
     }
 
     // Replace with CommandPS4Controller or CommandJoystick if needed
@@ -40,10 +40,10 @@ object RobotContainer
     private fun configureBindings()
     {
         // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
-        Trigger { ExampleSubsystem.exampleCondition() }.onTrue(ExampleCommand())
+      //  Trigger { ExampleSubsystem.exampleCondition() }.onTrue(ExampleCommand())
 
         // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
         // cancelling on release.
-        driverController.b().whileTrue(ExampleSubsystem.exampleMethodCommand())
+       // driverController.b().whileTrue(ExampleSubsystem.exampleMethodCommand())
     }
 }

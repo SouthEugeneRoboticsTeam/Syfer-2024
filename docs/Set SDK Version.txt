@@ -1,0 +1,2 @@
+build.gradle -> def javaVersion = JavaVerson VERSION_17
+File -> Project Structure -> Project -> SDK -> coretto-17
