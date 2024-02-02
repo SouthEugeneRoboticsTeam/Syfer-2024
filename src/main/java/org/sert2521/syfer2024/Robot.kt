@@ -1,7 +1,8 @@
 package org.sert2521.syfer2024
 
+import edu.wpi.first.wpilibj.DigitalInput
+import edu.wpi.first.wpilibj.Encoder
 import edu.wpi.first.wpilibj.TimedRobot
-import edu.wpi.first.wpilibj2.command.Command
 import edu.wpi.first.wpilibj2.command.CommandScheduler
 
 /**
@@ -14,8 +15,9 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler
  * the `Main.kt` file in the project. (If you use the IDE's Rename or Move refactorings when renaming the
  * object or package, it will get changed everywhere.)
  */
-object Robot : TimedRobot()
-{
+object Robot : TimedRobot() {
+    private val limitSwitch = DigitalInput(Constants.ElectronicIDs.LIMIT_SWITCH)
+    private val hallEffectSensor = DigitalInput(Constants.ElectronicIDs.HALL_EFFECT_SENSOR)
     /**
      * The autonomous command to run. While a default value is set here,
      * the [autonomousInit] method will set it to the value selected in
@@ -81,12 +83,17 @@ object Robot : TimedRobot()
         // This makes sure that the autonomous stops running when teleop starts running. If you want the
         // autonomous to continue until interrupted by another command, remove this line or comment it out.
         //autonomousCommand.cancel()
+
     }
 
     /** This method is called periodically during operator control.  */
     override fun teleopPeriodic()
     {
+        val switchState = !limitSwitch.get()
 
+        val magnetState = !hallEffectSensor.get()
+
+        println("$switchState, $magnetState")
     }
 
     override fun testInit()

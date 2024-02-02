@@ -13,6 +13,12 @@ object Constants
     {
         const val DRIVER_CONTROLLER_PORT = 0
     }
+
+    object ElectronicIDs{
+        const val LIMIT_SWITCH = 0
+        const val HALL_EFFECT_SENSOR = 9
+        const val SHAFT_ENCODER = 8
+    }
 }
 
 
