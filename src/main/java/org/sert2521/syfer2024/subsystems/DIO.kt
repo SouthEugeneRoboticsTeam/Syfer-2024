@@ -10,14 +10,14 @@ object DIO : Subsystem {
     private val beamBreak = DigitalInput(Constants.ElectronicIDs.BEAM_BREAK)
 
     fun getLimitSwitch() :Boolean {
-        return limitSwitch.get()
+        return !limitSwitch.get()
     }
 
-    fun getReadSwitch(){
-        readSwitch.get()
+    fun getReadSwitch() :Boolean {
+        return !readSwitch.get()
     }
 
-    fun getBeamBreak(){
-        beamBreak.get()
+    fun getBeamBreak() :Boolean {
+        return beamBreak.get()
     }
 }
