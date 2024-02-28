@@ -3,6 +3,7 @@ package org.sert2521.syfer2024.commands
 import edu.wpi.first.wpilibj2.command.Command
 import org.sert2521.chargedup2023.subsystems.LEDs
 import org.sert2521.syfer2024.Constants
+import org.sert2521.syfer2024.EnumColors
 
 class TransLEDs : Command() {
 var currentLED:Int = 0
@@ -12,20 +13,19 @@ var currentLED:Int = 0
         addRequirements(LEDs)
     }
 
+    fun setIncrimentColor(color:EnumColors){
+        LEDs.setLEDRGB(currentLED, Constants.Colors.colors[color]!![0], Constants.Colors.colors[color]!![1], Constants.Colors.colors[color]!![2])
+        currentLED += 1
+    }
+
     override fun initialize() {
         for(i in 1..(Constants.PhysicalConstants.LED_LENGTH/6)){
-            LEDs.setLEDRGB(currentLED, Constants.Colors.Blue.R, Constants.Colors.Blue.G, Constants.Colors.Blue.B)
-            currentLED += 1
-            LEDs.setLEDRGB(currentLED, Constants.Colors.Pink.R, Constants.Colors.Pink.G, Constants.Colors.Pink.B)
-            currentLED += 1
-            LEDs.setLEDRGB(currentLED, Constants.Colors.White.R, Constants.Colors.White.G, Constants.Colors.White.B)
-            currentLED += 1
-            LEDs.setLEDRGB(currentLED, Constants.Colors.Pink.R, Constants.Colors.Pink.G, Constants.Colors.Pink.B)
-            currentLED += 1
-            LEDs.setLEDRGB(currentLED, Constants.Colors.Blue.R, Constants.Colors.Blue.G, Constants.Colors.Blue.B)
-            currentLED += 1
-            LEDs.setLEDRGB(currentLED, Constants.Colors.Black.R, Constants.Colors.Black.G, Constants.Colors.Black.B)
-            currentLED += 1
+            setIncrimentColor(EnumColors.kTransBlue)
+            setIncrimentColor(EnumColors.kTransPink)
+            setIncrimentColor(EnumColors.kWhite)
+            setIncrimentColor(EnumColors.kTransPink)
+            setIncrimentColor(EnumColors.kTransBlue)
+            setIncrimentColor(EnumColors.kBlack)
         }
     }
 

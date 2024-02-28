@@ -8,12 +8,10 @@ class WhiteLEDs : Command() {
     init {
         // each subsystem used by the command must be passed into the addRequirements() method
         addRequirements(LEDs)
-        println("works")
     }
 
     override fun initialize() {
         LEDs.setAllLEDRGB(255, 255, 255)
-        println("Works again")
     }
 
     override fun execute() {}

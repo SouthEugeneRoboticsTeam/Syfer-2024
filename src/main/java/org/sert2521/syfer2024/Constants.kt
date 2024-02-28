@@ -7,6 +7,13 @@ package org.sert2521.syfer2024
  * `const` definitions. Other constant types should use `val` definitions.
  */
 
+enum class EnumColors{
+    kTransBlue,
+    kTransPink,
+    kWhite,
+    kBlack
+}
+
 object Constants
 {
     object OperatorConstants {
@@ -20,33 +27,17 @@ object Constants
     object ElectronicIDs{
         const val LIMIT_SWITCH = 0
         const val BEAM_BREAK = 2
-        const val READ_SWITCH = 9
-        //const val SHAFT_ENCODER = 8
+        const val READ_SWITCH = 9 //Magnet thingy
         const val LED_STRIP = 2
-
     }
 
     object Colors{
-        object Blue{
-            const val R = 96/2
-            const val G = 201/2
-            const val B = 250/2
-        }
-        object Pink{
-            const val R = 245
-            const val G = 169/2
-            const val B = 184/2
-        }
-        object White{
-            const val R = 255/2
-            const val G = 250/2
-            const val B = 254/2
-        }
-        object Black{
-            const val R = 0
-            const val G = 0
-            const val B = 0
-        }
+        val colors = mapOf(
+            EnumColors.kTransBlue to arrayOf(96/2, 201/2, 250/2),
+            EnumColors.kTransPink to arrayOf(245, 169/2, 184/2),
+            EnumColors.kWhite to arrayOf(255/2, 255/2, 245/2), //B is a little lower because color theory
+            EnumColors.kBlack to arrayOf(0, 0, 0)
+        )
     }
 
 }
