@@ -1,10 +1,9 @@
 package org.sert2521.syfer2024
 
-import edu.wpi.first.wpilibj.DigitalInput
-import edu.wpi.first.wpilibj.Encoder
 import edu.wpi.first.wpilibj.TimedRobot
 import edu.wpi.first.wpilibj2.command.CommandScheduler
-import org.sert2521.syfer2024.commands.PrintDIO
+import org.sert2521.syfer2024.commands.TransLEDs
+import org.sert2521.syfer2024.commands.WhiteLEDs
 
 /**
  * The VM is configured to automatically run this object (which basically functions as a singleton class),
@@ -79,17 +78,12 @@ object Robot : TimedRobot() {
 
     override fun teleopInit()
     {
-        // This makes sure that the autonomous stops running when teleop starts running. If you want the
-        // autonomous to continue until interrupted by another command, remove this line or comment it out.
-        //autonomousCommand.cancel()
-
+        TransLEDs().schedule()
     }
 
     /** This method is called periodically during operator control.  */
     override fun teleopPeriodic()
     {
-        val printDIO = PrintDIO()
-        printDIO.execute()
     }
 
     override fun testInit()
