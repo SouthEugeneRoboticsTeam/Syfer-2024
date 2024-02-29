@@ -2,8 +2,7 @@ package org.sert2521.syfer2024
 
 import edu.wpi.first.wpilibj.TimedRobot
 import edu.wpi.first.wpilibj2.command.CommandScheduler
-import org.sert2521.syfer2024.commands.TransLEDs
-import org.sert2521.syfer2024.commands.WhiteLEDs
+import org.sert2521.syfer2024.commands.PatternLEDs
 
 /**
  * The VM is configured to automatically run this object (which basically functions as a singleton class),
@@ -78,7 +77,7 @@ object Robot : TimedRobot() {
 
     override fun teleopInit()
     {
-        TransLEDs().schedule()
+        PatternLEDs().schedule()
     }
 
     /** This method is called periodically during operator control.  */

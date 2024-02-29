@@ -5,7 +5,7 @@ import org.sert2521.chargedup2023.subsystems.LEDs
 import org.sert2521.syfer2024.Constants
 import org.sert2521.syfer2024.EnumColors
 
-class TransLEDs : Command() {
+class PatternLEDs : Command() {
 var currentLED:Int = 0
 
     init {
@@ -18,7 +18,7 @@ var currentLED:Int = 0
         currentLED += 1
     }
 
-    override fun initialize() {
+    fun transLights(){
         for(i in 1..(Constants.PhysicalConstants.LED_LENGTH/6)){
             setIncrimentColor(EnumColors.kTransBlue)
             setIncrimentColor(EnumColors.kTransPink)
@@ -27,6 +27,21 @@ var currentLED:Int = 0
             setIncrimentColor(EnumColors.kTransBlue)
             setIncrimentColor(EnumColors.kBlack)
         }
+    }
+
+    fun rainbow(){
+        for(i in 1..Constants.PhysicalConstants.LED_LENGTH/6) {
+            setIncrimentColor(EnumColors.kRed)
+            setIncrimentColor(EnumColors.kOrange)
+            setIncrimentColor(EnumColors.kYellow)
+            setIncrimentColor(EnumColors.kGreen)
+            setIncrimentColor(EnumColors.kBlue)
+            setIncrimentColor(EnumColors.kPurple)
+        }
+    }
+
+    override fun initialize() {
+        transLights()
     }
 
     override fun execute() {

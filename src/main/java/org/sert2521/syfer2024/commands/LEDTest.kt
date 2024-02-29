@@ -3,7 +3,7 @@ package org.sert2521.syfer2024.commands
 import edu.wpi.first.wpilibj2.command.Command
 import org.sert2521.chargedup2023.subsystems.LEDs
 
-class WhiteLEDs : Command() {
+class LEDTest : Command() { //Sets all the LEDs to white as a test to see if they work
 
     init {
         // each subsystem used by the command must be passed into the addRequirements() method
