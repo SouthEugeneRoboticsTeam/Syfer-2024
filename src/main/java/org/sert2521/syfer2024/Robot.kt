@@ -32,6 +32,7 @@ object Robot : TimedRobot() {
         // Access the RobotContainer object so that it is initialized. This will perform all our
         // button bindings, and put our autonomous chooser on the dashboard.
         RobotContainer
+        Input
     }
 
     /**
@@ -77,7 +78,7 @@ object Robot : TimedRobot() {
 
     override fun teleopInit()
     {
-        PatternLEDs().schedule()
+        //PatternLEDs().schedule()
     }
 
     /** This method is called periodically during operator control.  */

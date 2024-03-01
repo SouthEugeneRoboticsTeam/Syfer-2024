@@ -24,7 +24,7 @@ object LEDs : SubsystemBase() {
     }
 
     fun setAllLEDRGB(r: Int, g: Int, b: Int) {
-        for (i in 1..Constants.PhysicalConstants.LED_LENGTH) {
+        for (i in 0..Constants.PhysicalConstants.LED_LENGTH - 1) {
             setLEDRGB(i, r, g, b)
         }
     }

@@ -40,12 +40,12 @@ var currentLED:Int = 0
         }
     }
 
-    override fun initialize() {
-        transLights()
-    }
+    override fun initialize() {}
 
     override fun execute() {
-
+        currentLED = 0
+        transLights()
+        print("works")
     }
 
     override fun isFinished(): Boolean {
@@ -53,5 +53,7 @@ var currentLED:Int = 0
         return false
     }
 
-    override fun end(interrupted: Boolean) {}
+    override fun end(interrupted: Boolean) {
+        LEDs.setAllLEDRGB(0, 0, 0)
+    }
 }

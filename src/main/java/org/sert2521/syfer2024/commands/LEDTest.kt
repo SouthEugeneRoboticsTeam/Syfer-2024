@@ -5,13 +5,14 @@ import org.sert2521.chargedup2023.subsystems.LEDs
 
 class LEDTest : Command() { //Sets all the LEDs to white as a test to see if they work
 
+    private var red =
     init {
         // each subsystem used by the command must be passed into the addRequirements() method
         addRequirements(LEDs)
     }
 
     override fun initialize() {
-        LEDs.setAllLEDRGB(255, 255, 255)
+        LEDs.setAllLEDRGB(25, 25, 25)
     }
 
     override fun execute() {}
@@ -21,5 +22,7 @@ class LEDTest : Command() { //Sets all the LEDs to white as a test to see if the
         return false
     }
 
-    override fun end(interrupted: Boolean) {}
+    override fun end(interrupted: Boolean) {
+        LEDs.setAllLEDRGB(0, 0, 0)
+    }
 }

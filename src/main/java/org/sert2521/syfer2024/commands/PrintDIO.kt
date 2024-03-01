@@ -14,10 +14,10 @@ class PrintDIO : Command() {
     override fun initialize() {}
 
     override fun execute() {
-        val limitSwitchState = DIO.getLimitSwitch()
+        //val limitSwitchState = DIO.getLimitSwitch()
         val readSwitchState = DIO.getReadSwitch()
         val beamBreakState = DIO.getBeamBreak()
-        println("$limitSwitchState $readSwitchState $beamBreakState")
+        println("$readSwitchState $beamBreakState")
     }
 
     override fun isFinished(): Boolean {

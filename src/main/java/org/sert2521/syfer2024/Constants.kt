@@ -43,20 +43,20 @@ object Constants
 
     object Colors{
         val colors = mapOf( //EXAMPLE:  EnumColors.k[color] to arrayOf(R, G, B),
-            EnumColors.kTransBlue to arrayOf(96, 201, 250),
-            EnumColors.kTransPink to arrayOf(255, 169, 184),
+            EnumColors.kTransBlue to arrayOf(96/2, 201/2, 250/2),
+            EnumColors.kTransPink to arrayOf(255/2, 169/4, 184/4),
 
-            EnumColors.kWhite to arrayOf(255, 255, 245), //B is a little lower because color theory
-            EnumColors.kGrey to arrayOf(123, 123, 120),
+            EnumColors.kWhite to arrayOf(255/2, 255/2, 245/2), //B is a little lower because color theory
+            //EnumColors.kGrey to arrayOf(123, 123, 120),
             EnumColors.kBlack to arrayOf(0, 0, 0),
 
-            EnumColors.kRed to arrayOf(255, 0, 0),
-            EnumColors.kOrange to arrayOf(255, 128, 0),
-            EnumColors.kYellow to arrayOf(255, 255, 0),
-            EnumColors.kGreen to arrayOf(0, 255, 0),
-            EnumColors.kTeal to arrayOf(0, 128, 128),
-            EnumColors.kBlue to arrayOf(0, 0, 255),
-            EnumColors.kPurple to arrayOf(148, 0, 211),
+            EnumColors.kRed to arrayOf(255/20, 0, 0),
+            EnumColors.kOrange to arrayOf(255/20, 128/20, 0),
+            EnumColors.kYellow to arrayOf(255/20, 255/20, 0),
+            EnumColors.kGreen to arrayOf(0, 255/20, 0),
+            EnumColors.kTeal to arrayOf(0, 128/20, 128/20),
+            EnumColors.kBlue to arrayOf(0, 0, 255/20),
+            EnumColors.kPurple to arrayOf(148/20, 0, 211/20),
 
 
         )
