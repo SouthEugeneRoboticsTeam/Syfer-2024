@@ -15,9 +15,9 @@ class PrintDIO : Command() {
 
     override fun execute() {
         //val limitSwitchState = DIO.getLimitSwitch()
-        val readSwitchState = DIO.getReadSwitch()
+        val reedSwitchState = DIO.getReedSwitch()
         val beamBreakState = DIO.getBeamBreak()
-        println("$readSwitchState $beamBreakState")
+        println("$reedSwitchState $beamBreakState")
     }
 
     override fun isFinished(): Boolean {

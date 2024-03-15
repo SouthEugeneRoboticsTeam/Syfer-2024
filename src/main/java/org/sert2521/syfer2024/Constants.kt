@@ -37,7 +37,7 @@ object Constants
     object ElectronicIDs{
         const val LIMIT_SWITCH = 0
         const val BEAM_BREAK = 2
-        const val READ_SWITCH = 9 //Magnet thingy
+        const val REED_SWITCH = 9 //Magnet thingy
         const val LED_STRIP = 2
     }
 

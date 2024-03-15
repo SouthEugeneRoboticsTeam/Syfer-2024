@@ -6,15 +6,15 @@ import org.sert2521.syfer2024.Constants
 
 object DIO : Subsystem {
     private val limitSwitch = DigitalInput(Constants.ElectronicIDs.LIMIT_SWITCH)
-    private val readSwitch = DigitalInput(Constants.ElectronicIDs.READ_SWITCH)
+    private val reedSwitch = DigitalInput(Constants.ElectronicIDs.REED_SWITCH)
     private val beamBreak = DigitalInput(Constants.ElectronicIDs.BEAM_BREAK)
 
     fun getLimitSwitch() :Boolean {
         return !limitSwitch.get()
     }
 
-    fun getReadSwitch() :Boolean {
-        return !readSwitch.get()
+    fun getReedSwitch() :Boolean {
+        return !reedSwitch.get()
     }
 
     fun getBeamBreak() :Boolean {

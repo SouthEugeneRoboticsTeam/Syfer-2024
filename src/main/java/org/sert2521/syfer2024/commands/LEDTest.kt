@@ -14,7 +14,6 @@ private var totalBright = 0
 private var redUp = true
 private var blueUp = true
 private var greenUp = true
-private var time =
 class LEDTest : Command() { //Sets all the LEDs to white as a test to see if they work
     init {
         // each subsystem used by the command must be passed into the addRequirements() method
@@ -25,7 +24,7 @@ class LEDTest : Command() { //Sets all the LEDs to white as a test to see if the
     }
 
     override fun execute() {
-        println("$totalBright, $g")
+        println("$totalBright")
         LEDs.setAllLEDRGB(red, green, blue)
 
         totalBright = red + green + blue
